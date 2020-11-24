@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "d6d91ffb-48f0-4ac5-a319-5a767cbef0c0",
+		"name": "blogTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createBlog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nickname\":\"vishal\",\n    \"title\":\"vishal blog\",\n    \"content\":\"vishal content\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/createBlog",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createBlog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllArticle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/getAllArticle",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getAllArticle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getArticle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/getArticle?id=15",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getArticle"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commentOnArticle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"article_id\":\"15\",\n    \"nickname\":\"comment 2\",\n    \"content\":\"superb comment2\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/commentOnArticle",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"commentOnArticle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getComment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/getComment?article_id=14",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getComment"
+					],
+					"query": [
+						{
+							"key": "article_id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subcomment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"maincom_id\":\"1\",\n    \"nickname\":\"1\",\n    \"comment\":\"sub comment 2\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/subcomment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"subcomment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
